@@ -100,7 +100,7 @@ const PaymentForm = ({
 
     try {
       const response = await fetch(
-        `http://localhost:5000/create-payment-intent`,
+        `http://46.202.178.147:5000/create-payment-intent`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
