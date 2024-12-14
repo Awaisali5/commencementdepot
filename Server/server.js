@@ -22,8 +22,8 @@ app.use(
 // CORS middleware
 app.use(
   cors({
-    origin: "http://localhost:3000",
-    methods: ["GET", "POST"],
+    origin: ["http://localhost:3000", "http://localhost:4173"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
