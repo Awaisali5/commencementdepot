@@ -5,6 +5,9 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { saveOrderToFirebase } from "../firebase";
 import { loadStripe } from "@stripe/stripe-js";
+
+const API_URL = process.env.API_URL || "http://localhost:5000";
+
 import {
   Elements,
   CardElement,
@@ -97,7 +100,7 @@ const PaymentForm = ({
 
     try {
       const response = await fetch(
-        "http://localhost:5000/create-payment-intent",
+        `${API_URL}/create-payment-intent`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

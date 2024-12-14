@@ -202,6 +202,8 @@ const createOrderEmailTemplate = (orderDetails) => {
   `;
 };
 
+
+
 // Order confirmation endpoint
 app.post("/confirm-order", async (req, res) => {
   try {
