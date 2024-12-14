@@ -71,7 +71,7 @@ const OrderSuccess = ({ loggedInUser }) => {
     // Send confirmation email
     const sendConfirmationEmail = async () => {
       try {
-        const response = await fetch(`http://46.202.178.147:5000/confirm-order`, {
+        const response = await fetch(`http://46.202.178.147:5000/api/confirm-order`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
