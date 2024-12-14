@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-const API_URL = process.env.API_URL || "http://localhost:5000";
+// const API_URL = import.meta.env.API_URL || "http://localhost:5000";
 
 const OrderSuccess = ({ loggedInUser }) => {
   const location = useLocation();
@@ -71,7 +71,7 @@ const OrderSuccess = ({ loggedInUser }) => {
     // Send confirmation email
     const sendConfirmationEmail = async () => {
       try {
-        const response = await fetch(`${API_URL}/confirm-order`, {
+        const response = await fetch(`http://localhost:5000/confirm-order`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
