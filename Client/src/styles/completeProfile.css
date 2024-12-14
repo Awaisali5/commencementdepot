@@ -1,0 +1,51 @@
+/* Add custom styles in the appropriate file or inline if needed */
+.full-body{
+    width: 100vw;
+    font-family: "kanit", sans-serif;
+    padding-top:5rem;
+    padding-bottom:5rem;
+}
+.text-lg span{
+    font-weight: 700;
+    padding-left: 20px;
+    font-size: 22px;
+}
+/* Ensure the sections align horizontally on larger screens */
+@media (min-width: 768px) {
+    .user-personal-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem; /* Adjust spacing between sections */
+    }
+  
+    .user-info, .personal-info {
+      padding-left: 0; /* Adjust padding for better horizontal layout */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* For mobile responsiveness, keep all sections stacked vertically */
+    .user-personal-info {
+      display: block;
+    }
+  
+    .user-info, .personal-info {
+      padding-left: 2rem; /* Ensure enough space on mobile */
+    }
+  }
+  
+  /* Keep the Billing Info at the bottom of the page */
+  .billing-info {
+    margin-top: 3rem; /* Adds margin to separate from user and personal info */
+    /* padding-left: 2rem; */
+  }
+  
+  .profile-btn{
+    background-color: rgb(125, 78, 125);
+    padding: 0.9rem 2rem;
+    border-radius: 1.3rem;
+  }
+
+  .profile-btn:hover{
+    background-color: #313869;
+  }

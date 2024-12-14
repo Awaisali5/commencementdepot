@@ -1,0 +1,274 @@
+/* productDetail.css */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
+
+.product-detail-page {
+  @apply min-h-screen bg-gradient-to-b from-white to-gray-50;
+  font-family: "Poppins", sans-serif;
+}
+
+.product-detail-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 
+         grid grid-cols-1 md:grid-cols-2 gap-16;
+}
+
+/* Elegant Image Section */
+.product-image-section {
+  @apply relative rounded-2xl overflow-hidden shadow-xl;
+}
+
+.image-wrapper {
+  @apply relative bg-white rounded-2xl overflow-hidden;
+  aspect-ratio: 3/4;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  @apply w-full h-full object-cover transition-all duration-500;
+  transform-origin: center;
+}
+
+.image-wrapper:hover .product-image.zoomed {
+  transform: scale(1.5);
+}
+
+.arrow-button {
+  @apply absolute top-1/2 -translate-y-1/2 w-12 h-12 
+         flex items-center justify-center bg-white/90 
+         backdrop-blur-sm rounded-full text-gray-800 
+         shadow-lg opacity-0 transition-all duration-300
+         hover:bg-white hover:scale-110;
+}
+
+.arrow-button.left {
+  @apply left-6 transform -translate-x-full;
+}
+
+.arrow-button.right {
+  @apply right-6 transform translate-x-full;
+}
+
+.image-wrapper:hover .arrow-button {
+  @apply opacity-100 translate-x-0;
+}
+
+.thumbnail-container {
+  @apply mt-6 grid grid-cols-4 gap-4 px-4;
+}
+
+.thumbnail {
+  @apply cursor-pointer rounded-lg overflow-hidden 
+         transition-all duration-300 transform
+         hover:scale-105 hover:shadow-lg;
+}
+
+.thumbnail.active {
+  @apply ring-2 ring-indigo-500 shadow-lg scale-105;
+}
+
+/* Elegant Product Info Section */
+.product-info-section {
+  @apply space-y-8 p-6 bg-white rounded-2xl shadow-xl;
+  font-family: "Playfair Display", serif;
+}
+
+.product-title {
+  @apply text-4xl font-bold text-gray-900 mb-4 
+         leading-tight tracking-tight;
+}
+
+.product-price {
+  @apply text-3xl font-semibold text-indigo-600 
+         flex items-baseline gap-2;
+}
+
+.product-price::before {
+  content: "$";
+  @apply text-xl opacity-75;
+}
+
+.product-sku {
+  @apply flex items-center text-sm text-gray-600 
+         border-b border-gray-100 pb-4;
+}
+
+/* Quantity Controls */
+.quantity-section {
+  @apply flex items-center gap-6 my-8;
+}
+
+.quantity-controls {
+  @apply flex items-center bg-gray-50 rounded-full p-1 
+         shadow-inner;
+}
+
+.quantity-input {
+  @apply w-16 text-center bg-transparent border-none 
+         focus:ring-0 text-gray-900 font-medium text-lg;
+}
+
+.quantity-decrement-button,
+.quantity-increment-button {
+  @apply w-10 h-10 flex items-center justify-center 
+         rounded-full text-gray-600 transition-all duration-200
+         hover:bg-indigo-500 hover:text-white;
+}
+
+/* Size Options */
+.gown-sizes {
+  @apply space-y-4 border-t border-gray-100 pt-6;
+}
+
+.size-options {
+  @apply grid grid-cols-3 sm:grid-cols-4 gap-3;
+}
+
+.size-button {
+  @apply px-4 py-3 rounded-xl border-2 border-gray-200
+         text-sm font-medium text-gray-700 transition-all
+         duration-300 relative overflow-hidden
+         hover:border-indigo-500 hover:text-indigo-600
+         hover:shadow-md active:scale-95;
+}
+
+.size-button::before {
+  content: "";
+  @apply absolute inset-0 bg-indigo-50 transform scale-x-0 
+         transition-transform duration-300 origin-left;
+}
+
+.size-button:hover::before {
+  @apply scale-x-100;
+}
+
+.size-button.active {
+  @apply border-indigo-500 bg-indigo-50 text-indigo-600 
+         shadow-inner;
+}
+
+.size-button.in-cart::after {
+  content: "✓";
+  @apply absolute -top-1 -right-1 w-5 h-5
+         bg-green-500 text-white text-xs rounded-full
+         flex items-center justify-center
+         transform scale-0 transition-transform duration-300;
+  animation: popIn 0.3s ease forwards;
+}
+
+/* Add to Cart Button */
+.add-to-cart-button {
+  @apply w-full mt-8 bg-indigo-600 text-white py-4 px-8
+         rounded-xl transition-all duration-300
+         flex items-center justify-center gap-3
+         hover:bg-indigo-700 hover:shadow-xl
+         active:transform active:scale-98
+         disabled:opacity-50 disabled:cursor-not-allowed;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.add-to-cart-button:hover {
+  background-image: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Product Description */
+.product-description {
+  @apply max-w-7xl mx-auto px-6 py-16 bg-white shadow-inner;
+}
+
+.product-description h3 {
+  @apply text-2xl font-bold text-gray-900 mb-6
+         font-playfair;
+}
+
+.gown-details {
+  @apply mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
+         gap-4 bg-gray-50 p-6 rounded-xl;
+}
+
+.gown-details li {
+  @apply text-sm text-gray-600 flex items-center gap-3
+         before:content-['•'] before:text-indigo-500 
+         before:font-bold hover:text-indigo-600
+         transition-colors duration-200;
+}
+
+/* Related Products */
+.related-products {
+  @apply bg-gray-50 py-16;
+}
+
+.related-product-card {
+  @apply bg-white rounded-xl shadow-lg overflow-hidden
+         transform transition-all duration-500 
+         hover:-translate-y-2 hover:shadow-xl;
+}
+
+/* Animations */
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Toast Notifications */
+.toast {
+  @apply fixed bottom-4 right-4 px-6 py-4 rounded-xl
+         shadow-2xl transform transition-all duration-500;
+  animation: slideIn 0.5s ease forwards;
+}
+
+.toast-success {
+  @apply bg-gradient-to-r from-green-500 to-emerald-500 
+         text-white;
+}
+
+.toast-error {
+  @apply bg-gradient-to-r from-red-500 to-pink-500 
+         text-white;
+}
+
+/* Size Guide Modal */
+.size-guide-modal {
+  @apply fixed inset-0 z-50 bg-black/50 
+         backdrop-blur-sm transition-opacity duration-300;
+}
+
+.size-guide-modal .modal-content {
+  @apply bg-white rounded-2xl shadow-2xl p-8 max-w-2xl 
+         w-full mx-4 transform transition-all duration-300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-detail-container {
+    @apply grid-cols-1 gap-8 py-6;
+  }
+
+  .product-title {
+    @apply text-3xl;
+  }
+
+  .size-options {
+    @apply grid-cols-3;
+  }
+
+  .quantity-section {
+    @apply flex-col items-start gap-4;
+  }
+}

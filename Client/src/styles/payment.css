@@ -1,0 +1,244 @@
+.payment-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  font-family: "kanit", sans-serif;
+  background-color: hsl(210, 20%, 98%);
+  min-height: 100vh;
+}
+
+.order-summary,
+.payment-section {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 48%;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 29px;
+  font-family: "kanit", sans-serif;
+  font-weight: 700;
+  color: #313869;
+}
+
+.summary-details p {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  color: #4b5563;
+  font-size: 16px;
+}
+
+h3 span,
+.summary-details p span {
+  font-weight: 500;
+  color: #111827;
+}
+
+.total-price {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  text-align: right;
+  gap: 2rem;
+  font-weight: bold;
+  color: #313869;
+  margin-top: 5rem;
+}
+.order-item {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 15px;
+}
+
+.order-img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-item-image {
+  width: 120px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.order-item-details h4 {
+  font-size: 16px;
+  color: #1f2937;
+  margin-bottom: 5px;
+}
+
+.payment-section {
+  max-width: 600px;
+  margin: auto;
+}
+
+.full-width {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.payment-method-btn {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.payment-method-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.card-details label {
+  margin-top: 10px;
+  display: block;
+}
+
+.btn-save {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-save:hover {
+  background-color: #0056b3;
+}
+
+.discount-section {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.discount-section input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.discount-section button {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.discount-section button:hover {
+  background: #1d4ed8;
+}
+
+.card-details {
+  position: relative;
+  margin-top: 20px;
+}
+
+.card-details input {
+  padding: 12px 40px;
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.card-details i {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  font-size: 20px;
+  color: #9ca3af;
+}
+
+.address-form label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+.address-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.discount-section {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.discount-section input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+}
+
+.discount-section button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.order-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2rem;
+}
+
+.order-item-image {
+  width: 150px;
+  margin-bottom: 30px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.order-item-details {
+  flex: 1;
+  font-family: "ubuntu", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.order-item-details h2 {
+  color: #313869;
+  text-align: center;
+  font-size: 24px;
+  font-family: "kanit", sans-serif;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}

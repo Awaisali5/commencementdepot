@@ -1,0 +1,99 @@
+/* Slide-In Transition from the bottom for the entire table */
+.order-history-container {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    position: relative;
+    bottom: -100%; /* Initially positioned off-screen at the bottom */
+    opacity: 0; /* Initially invisible */
+    transition: bottom 0.9s ease-out, opacity 0.9s ease-out; /* Transition for slide-in and opacity */
+}
+
+/* When the container is in view, slide it up */
+.order-history-container.show {
+    bottom: 0; /* Slide to the original position */
+    opacity: 1; /* Make it visible */
+}
+
+/* Table Header Styling */
+.order-history-table thead {
+    background: #474c70;
+    color: white;
+    text-align: left;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.order-history-table th {
+    padding: 12px 16px;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+/* Table Cell Styling */
+.order-history-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid #e5e5e5;
+    transition: background 0.3s ease;
+}
+
+/* Hover Effect for Table Rows */
+.order-history-table .order-row:hover {
+    background: #f1f8e9;
+    cursor: pointer;
+    transform: translateY(-5px); /* Move row slightly up */
+    transition: transform 0.3s ease-out; /* Transition for hover effect */
+}
+
+/* Status tags for different states */
+.status-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 600;
+}
+
+.status-tag.delivered {
+    background: #4caf50;
+}
+
+.status-tag.pending {
+    background: #ff9800;
+}
+
+.status-tag.cancelled {
+    background: #f44336;
+}
+
+.status-tag.shipped {
+    background: #72d0c7;
+}
+
+.status-tag.ordered {
+    background: #d072ba;
+}
+
+/* No Orders Message */
+.no-orders-message {
+    font-size: 1.2rem;
+    color: #888;
+    text-align: center;
+    margin-top: 1rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in effect for No Orders message */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
