@@ -8,7 +8,7 @@ const {confirmOrder} = require('../controllers/confirmOrder');
 
 const router = express.Router();
 
-router.get("/test-email", testEmail);
+router.post("/test-email", testEmail);
 router.post("/confirm-order", confirmOrder);
 router.post("/create-payment-intent", createPaymentIntent)
 router.post("/webhook",webhook)
