@@ -22,11 +22,12 @@ app.use(
 // CORS middleware
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:4173"],
+    origin: ["http://localhost:3000", "http://localhost:4173", "http://46.202.178.147/", "https://commencementdepot.com/"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
 
 // Email transporter setup
 const transporter = nodemailer.createTransport({
