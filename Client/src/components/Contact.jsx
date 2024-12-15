@@ -29,7 +29,7 @@ const EnhancedContactForm = () => {
   // On form submission
   const onSubmit = async (data) => {
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("http://46.202.178.147/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

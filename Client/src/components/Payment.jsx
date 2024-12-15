@@ -100,7 +100,7 @@ const PaymentForm = ({
 
     try {
       const response = await fetch(
-        `http://46.202.178.147:5000/create-payment-intent`,
+        `http://46.202.178.147/create-payment-intent`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -116,13 +116,16 @@ const PaymentForm = ({
         }
       );
 
-      console.log(response)
+      
 
       if (!response.ok) {
         throw new Error("Failed to create payment intent");
       }
 
       const { clientSecret } = await response.json();
+
+      console.log(clientSecret)
+      alert(clientSecret)
 
       const { error: paymentError, paymentIntent } =
         await stripe.confirmCardPayment(clientSecret, {
