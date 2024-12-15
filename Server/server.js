@@ -22,7 +22,7 @@ app.use(
 // CORS middleware
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:4173", "http://46.202.178.147", "https://commencementdepot.com"],
+    origin: ["https://commencementdepot.com", "http://localhost:3000", "http://localhost:4173", "http://46.202.178.147", ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -290,6 +290,10 @@ app.post("/create-payment-intent", async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+
+app.get("/test", async (req, res) => {
+  console.log("Everything is working")
+})
 
 // Webhook endpoint
 app.post("/webhook", async (req, res) => {

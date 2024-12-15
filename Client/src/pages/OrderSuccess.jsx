@@ -87,6 +87,7 @@ const OrderSuccess = ({ loggedInUser }) => {
             },
             customerEmail: loggedInUser.email,
           }),
+          // mode: 'no-cors'
         });
 
        
