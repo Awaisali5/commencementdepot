@@ -22,7 +22,7 @@ app.use(
 // CORS middleware
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:4173", "http://46.202.178.147/", "https://commencementdepot.com/"],
+    origin: ["http://localhost:3000", "http://localhost:4173", "http://46.202.178.147", "https://commencementdepot.com"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
